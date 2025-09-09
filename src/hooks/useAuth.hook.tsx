@@ -5,7 +5,7 @@ import { getUserBySecret } from '../services/userService'
 import { encode } from '../utils/encode'
 
 export const useAuth = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const { db } = useDB()
@@ -29,9 +29,9 @@ export const useAuth = () => {
 
       const loggedInUser = getUserBySecret(db, encode(email, password))
       if (loggedInUser) {
-        setUser(loggedInUser);
-        setError('');
-        sessionStorage.setItem('user', JSON.stringify(loggedInUser));
+        setUser(loggedInUser)
+        setError('')
+        sessionStorage.setItem('user', JSON.stringify(loggedInUser))
       } else {
         setError('Invalid Credentials!')
       }

@@ -1,10 +1,10 @@
-# User Hierarchy - Organization Structure
+# User Heirarchy - Organization Structure
 
-A React application built with TypeScript and Vite for displaying and managing organizational hierarchy structures.
+A React application built with TypeScript and Vite for displaying and managing organizational heirarchy structures.
 
 ## Features
 
-- User hierarchy visualization
+- User heirarchy visualization
 - Login authentication
 
 ## Tech Stack
@@ -89,7 +89,7 @@ npm run test:ui
 src/
 ├── components/          # Reusable UI components
 │   ├── common/         # Common components (loading spinner, etc.)
-│   ├── hierarchy/      # Hierarchy-specific components
+│   ├── heirarchy/      # Heirarchy-specific components
 │   └── login/          # Login-related components
 ├── constants/          # Application constants
 ├── context/            # React context providers

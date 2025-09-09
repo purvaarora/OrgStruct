@@ -8,8 +8,8 @@ type LoginFormProps = {
 }
 
 export const LoginForm = ({ handleLogin, error, loading }: LoginFormProps) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [emailError, setEmailError] = useState('')
   const [passwordError, setPasswordError] = useState('')
 
@@ -27,7 +27,7 @@ export const LoginForm = ({ handleLogin, error, loading }: LoginFormProps) => {
     setEmailError('')
     return true
   }
-  
+
   // Basic password validation for required
   const validatePassword = () => {
     if (!password.trim()) {
@@ -65,7 +65,6 @@ export const LoginForm = ({ handleLogin, error, loading }: LoginFormProps) => {
             />
             {emailError && <div className="field-error">{emailError}</div>}
           </div>
-
         </div>
 
         <div className="form-group">
@@ -81,7 +80,9 @@ export const LoginForm = ({ handleLogin, error, loading }: LoginFormProps) => {
               }}
               onBlur={validatePassword}
             />
-            {passwordError && <div className="field-error">{passwordError}</div>}
+            {passwordError && (
+              <div className="field-error">{passwordError}</div>
+            )}
           </div>
         </div>
 

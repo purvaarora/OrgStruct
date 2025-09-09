@@ -1,3 +1,7 @@
+/**
+ * Login page component that displays login form
+ */
+
 import { LoginForm } from '../components/login/loginForm'
 
 type LoginPageProps = {

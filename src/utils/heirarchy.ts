@@ -1,3 +1,7 @@
+/**
+ * Heirarchy utility function for building organisational tree structure
+ */
+
 import { type User } from '../types/db'
 
 export type UserNode = User & { children: Array<UserNode> }

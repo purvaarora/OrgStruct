@@ -1,3 +1,6 @@
+/**
+ * Tree component that renders a list of user nodes
+ */
 import React from 'react'
 import { type UserNode } from '../../utils/heirarchy'
 import { UserItem } from './userItem'
@@ -10,7 +13,7 @@ export const UserTree: React.FC<UserTreeProps> = ({ nodes }) => {
   if (!nodes.length) return null
 
   return (
-    <ul className='heirarchy-list'>
+    <ul className="heirarchy-list">
       {nodes.map((user) => (
         <UserItem key={user.id} user={user} />
       ))}

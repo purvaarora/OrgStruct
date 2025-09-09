@@ -1,3 +1,7 @@
+/**
+ * Helper function that returns a secret when given an email and password
+ */
+
 const POISON_ARRAY = [
   156, 33, 64, 174, 120, 204, 69, 242, 177, 98, 16, 244, 75, 5, 21, 7, 145, 39,
   156, 119, 246, 63, 43, 201, 91, 164, 171, 244, 198, 100, 252, 91, 92, 193, 95,

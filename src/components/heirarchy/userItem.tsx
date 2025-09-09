@@ -1,4 +1,8 @@
-import React, { useState } from 'react'
+/**
+ * Individual user item component in the hierarchy tree
+ */
+
+import React, { useState, useMemo } from 'react'
 import { type UserNode } from '../../utils/heirarchy'
 import { UserTree } from './userTree'
 import { FaMinus, FaPlus } from 'react-icons/fa'
@@ -9,12 +13,14 @@ type UserItemProps = {
   user: UserNode
 }
 
-export const UserItem: React.FC<UserItemProps> = ({ user }) => {
+export const UserItem: React.FC<UserItemProps> = React.memo(({ user }) => {
   const [expanded, setExpanded] = useState(true)
   const hasChildren = user.children.length > 0
 
-  const getUserInitials = () =>
-    `${user.firstName.charAt(0)}${user.lastName.charAt(0)}`
+  const userInitials = useMemo(
+    () => `${user.firstName.charAt(0)}${user.lastName.charAt(0)}`,
+    [user.firstName, user.lastName],
+  )
 
   const onToggle = (e: React.MouseEvent) => {
     e.stopPropagation()
@@ -32,7 +38,7 @@ export const UserItem: React.FC<UserItemProps> = ({ user }) => {
           )}
         </span>
         <span className="user-avatar">
-          <UserAvatar userPhoto={user.photo} altText={getUserInitials()} />
+          <UserAvatar userPhoto={user.photo} altText={userInitials} />
         </span>
         <span className="user-details">
           {user.firstName} {user.lastName} {user.email}
@@ -46,4 +52,4 @@ export const UserItem: React.FC<UserItemProps> = ({ user }) => {
       )}
     </li>
   )
-}
+})
