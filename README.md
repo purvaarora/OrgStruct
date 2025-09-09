@@ -7,6 +7,10 @@ A React application built with TypeScript and Vite for displaying and managing o
 - User heirarchy visualization
 - Login authentication
 
+## App Demo
+
+https://github.com/user-attachments/assets/d6e09aa1-68aa-409f-a620-4c4a407ccc4d
+
 ## Tech Stack
 
 - **React 19** - UI library
