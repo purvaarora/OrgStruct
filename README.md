@@ -13,7 +13,6 @@ A React application built with TypeScript and Vite for displaying and managing o
 - **TypeScript** - Type safety
 - **Vite** - Build tool and dev server
 - **React Icons** - Icon library
-- **JSON Server** - Mock API server
 - **ESLint** - Code linting
 
 ## Prerequisites
