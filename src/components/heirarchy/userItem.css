@@ -1,0 +1,49 @@
+.user-item {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.user-icon {
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.user-icon .disabled {
+  cursor: not-allowed;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #780978;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.user-item-children {
+  margin-left: 18px;
+}
+
+.user-details {
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 600px) {
+  .heirarchy-list {
+    padding-inline-start: 1rem;
+  }
+}
